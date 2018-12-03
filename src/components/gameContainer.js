@@ -75,10 +75,10 @@ export default class GameContainer extends React.Component {
                 <GameInfo isDisplaying={this.state.gameInfoDisplay} toggleGameInfo={() => this.toggleGameInfo()}/>
                 <h1>HOT or COLD</h1>
                 <section className="game">
-                    <Feedback feedback={this.state.feedback}/>
-                    <GuessForm hasWon={this.state.hasWon} onSubmit={(value) => this.handleGuessSubmission(value)}/>
-                    <GuessCounter counter={this.state.counter}/>
-                    <GuessHistory guessHistory={this.state.guessHistory}/>
+                    <Feedback />
+                    <GuessForm />
+                    <GuessCounter />
+                    <GuessHistory />
                 </section>
             </div>
         );

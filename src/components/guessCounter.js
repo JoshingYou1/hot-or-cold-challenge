@@ -1,9 +1,17 @@
 import React from 'react';
+import {connect} from 'react-redux';
 
-export default function GuessCounter(props) {
+export function GuessCounter(props) {
     return (
         <div>
             <p>{props.counter}</p>
         </div>
     );
 }
+
+const mapStateToProps = state => ({
+    counter: state.counter
+});
+
+export default connect(mapStateToProps)(GuessCounter);
+

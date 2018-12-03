@@ -1,6 +1,7 @@
 import React from 'react';
+import {connect} from 'react-redux';
 
-export default function Feedback(props) {
+export function Feedback(props) {
     return (
         <div className="feedback-div">
             <h2>
@@ -9,3 +10,9 @@ export default function Feedback(props) {
         </div>
     );
 }
+
+const mapStateToProps = state => ({
+  feedback: state.feedback
+});
+
+export default connect(mapStateToProps)(Feedback);

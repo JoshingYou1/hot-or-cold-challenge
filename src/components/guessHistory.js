@@ -1,6 +1,7 @@
 import React from 'react';
+import {connect} from 'react-redux';
 
-export default function GuessHistory(props) {
+export function GuessHistory(props) {
     const guessHistoryList = props.guessHistory.map((guess, index) => 
         <li key={index}>
             {guess}
@@ -13,3 +14,9 @@ export default function GuessHistory(props) {
         </ul>
     );
 }
+
+const mapStateToProps = state => ({
+    guessHistory: state.guessHistory
+});
+
+export default connect(mapStateToProps)(GuessHistory);

@@ -36,7 +36,7 @@ export const gameReducer = (state=initialState, action) => {
         return Object.assign({}, state, {
             counter: state.counter + 1,
             guessHistory: state.guessHistory.concat(action.guess),
-            feedback: feedbackOnGuess(action.guess, state.secretNumber)
+            ...feedbackOnGuess(action.guess, state.secretNumber)
         });
     }
     else if (action.type === NEW_GAME) {

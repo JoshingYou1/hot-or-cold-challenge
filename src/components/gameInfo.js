@@ -1,6 +1,7 @@
 import React from 'react';
+import {connect} from 'react-redux';
 
-export default function GameInfo(props) {
+export function GameInfo(props) {
     return (
         <div className={props.isDisplaying ? '' : 'hidden'}>
             <h1>What do I do?</h1>
@@ -11,3 +12,5 @@ export default function GameInfo(props) {
         </div>
     );
 }
+
+export default connect()(GameInfo);
